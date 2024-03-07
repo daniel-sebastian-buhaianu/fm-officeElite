@@ -49,6 +49,7 @@ main {
 #plans {
     > article {
         margin-bottom: 32px;
+        position: relative;
         &:last-child {
             margin-bottom: 0;
         }
@@ -81,5 +82,20 @@ main {
                 margin-bottom: 0;
             }
         }
+    }
+}
+
+footer {
+    height: 1248px;
+    margin-top: -775px;
+    background-color: #25293A;
+    background-image: url(../assets/home/bg-pattern-footer.svg);
+    background-repeat: no-repeat;
+    background-size: 1202px 1202px;
+    background-position: 50% 140px;
+    text-align: center;
+    .countdown {
+        padding-top: 894px;
+        margin-bottom: 40px;
     }
 }
