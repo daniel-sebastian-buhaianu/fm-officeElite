@@ -1,0 +1,38 @@
+@import 'reset';
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,40..300&display=swap');
+
+html {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.heading-1 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+.heading-2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.heading-3 {
+    font-size: 16px;
+    line-height: 48px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.body-1 {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.body-2 {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
