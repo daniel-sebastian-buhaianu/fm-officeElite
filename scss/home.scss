@@ -22,10 +22,17 @@ header {
     }
 }
 
-#intro {
+main {
     padding: 23px;
+}
+
+#intro {
     text-align: center;
+    margin-bottom: 100px;
     h1 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
         color: $color--black-1;
         margin-bottom: 23px;
     }
@@ -35,16 +42,44 @@ header {
         margin-bottom: 23px;
     }
     button {
-        padding: 16px 32px;
-        border-radius: 28px;
-        background-color: $color--blue-1;
-        color: $color--white;
-        font-size: 16px;
-        font-weight: 700;
         box-shadow: 0 25px 25px -10px rgba(81, 117, 255, 0.25);
-        &:hover {
-            cursor: pointer;
-            background-color: $color--blue-2;
+    }
+}
+
+#plans {
+    > article {
+        margin-bottom: 32px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:nth-child(2) {
+            background-color: $color--blue-1;
+            background-image: url(../assets/home/bg-pattern-pricing.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 102%;
+            color: $color--white-2;
+            .plan-features {
+                color: $color--white-2;
+            }
+        }
+    }
+    .plan-title {
+        margin-bottom: 40px;
+    }
+    .plan-price {
+        margin-bottom: 56px;
+        .heading-1 {
+            margin-bottom: 8px;
+        }
+    }
+    .plan-features {
+        margin-bottom: 32px;
+        color: $color--gray;
+        li {
+            margin-bottom: 24px;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }

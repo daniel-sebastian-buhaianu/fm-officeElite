@@ -4,11 +4,12 @@
 
 html {
     font-family: 'Kumbh Sans', sans-serif;
+    background-color: $color--white-1;
 }
 
 .heading-1 {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 56px;
+    line-height: 64px;
     font-weight: 700;
 }
 
@@ -35,4 +36,39 @@ html {
     font-size: 16px;
     line-height: 28px;
     font-weight: 400;
+}
+
+.btn {
+    padding: 16px 32px;
+    border-radius: 28px;
+    font-size: 16px;
+    font-weight: 700;
+    &:hover {
+        cursor: pointer;
+    }
+    &--primary {
+        background-color: $color--blue-1;
+        color: $color--white-2;
+        &:hover {
+            background-color: $color--blue-2;
+        }
+    }
+    &--secondary {
+        background-color: $color--blue-4;
+        color: $color--blue-1;
+        &:hover {
+            background-color: $color--blue-3;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    border-radius: 13px;
+    box-shadow: 0 50px 50px -25px rgba(75, 92, 154, 0.25);
+    background-color: $color--white-2;
+    color: $color--black-2;
 }

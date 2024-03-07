@@ -59,11 +59,12 @@ input, input:focus, button {
 
 html {
   font-family: "Kumbh Sans", sans-serif;
+  background-color: #FAFAFA;
 }
 
 .heading-1 {
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 56px;
+  line-height: 64px;
   font-weight: 700;
 }
 
@@ -92,6 +93,41 @@ html {
   font-weight: 400;
 }
 
+.btn {
+  padding: 16px 32px;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn--primary {
+  background-color: #5175FF;
+  color: #FFFFFF;
+}
+.btn--primary:hover {
+  background-color: #829CFF;
+}
+.btn--secondary {
+  background-color: #E4EAFF;
+  color: #5175FF;
+}
+.btn--secondary:hover {
+  background-color: #D3DDFF;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+  border-radius: 13px;
+  box-shadow: 0 50px 50px -25px rgba(75, 92, 154, 0.25);
+  background-color: #FFFFFF;
+  color: #333950;
+}
+
 header {
   height: 355px;
   display: flex;
@@ -114,12 +150,19 @@ header #illustration-charts {
   height: 192px;
 }
 
-#intro {
+main {
   padding: 23px;
+}
+
+#intro {
   text-align: center;
+  margin-bottom: 100px;
 }
 #intro h1 {
-  color: #333950;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  color: #25293A;
   margin-bottom: 23px;
 }
 #intro p {
@@ -128,17 +171,43 @@ header #illustration-charts {
   margin-bottom: 23px;
 }
 #intro button {
-  padding: 16px 32px;
-  border-radius: 28px;
-  background-color: #5175FF;
-  color: #FFFFFF;
-  font-size: 16px;
-  font-weight: 700;
   box-shadow: 0 25px 25px -10px rgba(81, 117, 255, 0.25);
 }
-#intro button:hover {
-  cursor: pointer;
-  background-color: #829CFF;
+
+#plans > article {
+  margin-bottom: 32px;
+}
+#plans > article:last-child {
+  margin-bottom: 0;
+}
+#plans > article:nth-child(2) {
+  background-color: #5175FF;
+  background-image: url(../assets/home/bg-pattern-pricing.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 102%;
+  color: #FFFFFF;
+}
+#plans > article:nth-child(2) .plan-features {
+  color: #FFFFFF;
+}
+#plans .plan-title {
+  margin-bottom: 40px;
+}
+#plans .plan-price {
+  margin-bottom: 56px;
+}
+#plans .plan-price .heading-1 {
+  margin-bottom: 8px;
+}
+#plans .plan-features {
+  margin-bottom: 32px;
+  color: #747B95;
+}
+#plans .plan-features li {
+  margin-bottom: 24px;
+}
+#plans .plan-features li:last-child {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=home.css.map */
