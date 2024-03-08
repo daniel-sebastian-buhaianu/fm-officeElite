@@ -1,0 +1,105 @@
+@import 'global';
+
+header {
+    height: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../assets/home/bg-pattern-header.svg);
+    background-repeat: no-repeat;
+    background-size: 458px;
+    background-position: center -165px;
+    img {
+        max-width: 100%;
+    }
+    #logo {
+        margin-top: 46px;
+    }
+    #illustration-charts {
+        width: 171px;
+        height: 192px;
+    }
+}
+
+main {
+    padding: 23px;
+}
+
+#intro {
+    text-align: center;
+    margin-bottom: 100px;
+    .headline {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+        color: $color--black-1;
+        margin-bottom: 23px;
+    }
+    .summary {
+        color: $color--gray;
+        padding: 5px;
+        margin-bottom: 23px;
+    }
+    .call-to-action {
+        box-shadow: 0 25px 25px -10px rgba(81, 117, 255, 0.25);
+    }
+}
+
+#plans {
+    .plan {
+        margin-bottom: 32px;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:nth-child(2) {
+            background-color: $color--blue-1;
+            background-image: url(../assets/home/bg-pattern-pricing.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 102%;
+            color: $color--white-2;
+            .features {
+                color: $color--white-2;
+            }
+        }
+        .title {
+            margin-bottom: 40px;
+        }
+        .price {
+            margin-bottom: 56px;
+            .title {
+                margin-bottom: 8px;
+            }
+        }
+        .features {
+            margin-bottom: 32px;
+            color: $color--gray;
+            .feature {
+                margin-bottom: 24px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .call-to-action {
+            width: 171px;
+            margin: 0 auto;
+        }
+    }
+}
+
+footer {
+    height: 1248px;
+    margin-top: -775px;
+    background-color: #25293A;
+    background-image: url(../assets/home/bg-pattern-footer.svg);
+    background-repeat: no-repeat;
+    background-size: 1202px 1202px;
+    background-position: 50% 140px;
+    text-align: center;
+    .countdown {
+        padding-top: 894px;
+        margin-bottom: 40px;
+    }
+}
