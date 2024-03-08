@@ -8,8 +8,8 @@ header {
     align-items: center;
     background-image: url(../assets/home/bg-pattern-header.svg);
     background-repeat: no-repeat;
-    background-size: 458px 458px;
-    background-position: -45px -165px;
+    background-size: 458px;
+    background-position: center -165px;
     img {
         max-width: 100%;
     }
@@ -29,25 +29,25 @@ main {
 #intro {
     text-align: center;
     margin-bottom: 100px;
-    h1 {
+    .headline {
         font-size: 40px;
         font-weight: 700;
         line-height: 48px;
         color: $color--black-1;
         margin-bottom: 23px;
     }
-    p {
+    .summary {
         color: $color--gray;
         padding: 5px;
         margin-bottom: 23px;
     }
-    button {
+    .call-to-action {
         box-shadow: 0 25px 25px -10px rgba(81, 117, 255, 0.25);
     }
 }
 
 #plans {
-    > article {
+    .plan {
         margin-bottom: 32px;
         position: relative;
         &:last-child {
@@ -59,28 +59,32 @@ main {
             background-repeat: no-repeat;
             background-position: 50% 102%;
             color: $color--white-2;
-            .plan-features {
+            .features {
                 color: $color--white-2;
             }
         }
-    }
-    .plan-title {
-        margin-bottom: 40px;
-    }
-    .plan-price {
-        margin-bottom: 56px;
-        .heading-1 {
-            margin-bottom: 8px;
+        .title {
+            margin-bottom: 40px;
         }
-    }
-    .plan-features {
-        margin-bottom: 32px;
-        color: $color--gray;
-        li {
-            margin-bottom: 24px;
-            &:last-child {
-                margin-bottom: 0;
+        .price {
+            margin-bottom: 56px;
+            .title {
+                margin-bottom: 8px;
             }
+        }
+        .features {
+            margin-bottom: 32px;
+            color: $color--gray;
+            .feature {
+                margin-bottom: 24px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .call-to-action {
+            width: 171px;
+            margin: 0 auto;
         }
     }
 }
