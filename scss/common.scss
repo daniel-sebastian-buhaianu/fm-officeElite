@@ -1,0 +1,107 @@
+html {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: $color--white-1;
+}
+
+::placeholder {
+    color: $color--gray-2;
+}
+
+.heading-1 {
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 700;
+}
+
+.heading-2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+.heading-3 {
+    font-size: 16px;
+    line-height: 48px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.body-1 {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.body-2 {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.btn {
+    padding: 16px 32px;
+    border-radius: 28px;
+    font-size: 16px;
+    font-weight: 700;
+    &:hover {
+        cursor: pointer;
+    }
+    &--primary {
+        background-color: $color--blue-1;
+        color: $color--white-2;
+        &:hover {
+            background-color: $color--blue-2;
+        }
+    }
+    &--secondary {
+        background-color: $color--blue-4;
+        color: $color--blue-1;
+        &:hover {
+            background-color: $color--blue-3;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    border-radius: 13px;
+    box-shadow: 0 50px 50px -25px rgba(75, 92, 154, 0.25);
+    background-color: $color--white-2;
+    color: $color--black-2;
+}
+
+.countdown {
+    width: 328px;
+    margin: 0 auto;
+    text-align: center;
+    color: $color--white-2;
+    .title {
+        letter-spacing: 5px;
+        margin-bottom: 18px;
+        span {
+            color: $color--blue-1;
+        }
+    }
+    .timer {
+        display: flex;
+        justify-content: space-between;
+        .item {
+            background-color: $color--black-2;
+            padding: 16px;
+            border-radius: 5px;
+            .number {
+                font-size: 32px;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+            .description {
+                font-size: 12px;
+                font-weight: 700;
+                color: $color--gray-1;
+            }
+        }
+    }
+}
