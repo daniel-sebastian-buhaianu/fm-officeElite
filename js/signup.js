@@ -1,6 +1,7 @@
 'use strict';
 
 const form = document.querySelector('.form');
+const dropdown = form.querySelector('.dropdown');
 
 window.onload = function() {
     form.querySelectorAll('input').forEach(input => {
@@ -10,18 +11,14 @@ window.onload = function() {
 
 form.querySelector('.submit').addEventListener('click', function() {
     form.querySelectorAll('input').forEach(input => {
-        if (input.parentElement.className.includes('with-error')) {
-            input.parentElement.className = input.parentElement.className.replace('with-error', '');
-        }
+        removeClass('with-error', input.parentElement);
 
         if (!isInputValid(input)) {
-            input.parentElement.className += ' with-error';
+            addClass('with-error', input.parentElement);
         }
 
         input.addEventListener('click', function() {
-            if (this.parentElement.className.includes('with-error')) {
-                this.parentElement.className = this.parentElement.className.replace('with-error', '');
-            }
+            removeClass('with-error', this.parentElement);
         });
     });
 
@@ -30,29 +27,42 @@ form.querySelector('.submit').addEventListener('click', function() {
     }
 });
 
-const dropdown = form.querySelector('.dropdown');
-
 dropdown.addEventListener('click', function() {
-    const options = this.querySelector('.options');
-
-    if (!options.className.includes('active')) {
-        options.className += ' active';
-    } else {
-        options.className = options.className.replace('active', '');
-    }
+    toggleClass('active', this.querySelector('.options'));
 });
 
 dropdown.querySelectorAll('.options .item')
     .forEach(item => {
         item.addEventListener('click', function() {
-            const selectedItem = this.parentElement.querySelector('.selected');
-            selectedItem.className = selectedItem.className.replace('selected', '');
+            removeClass('selected', this.parentElement.querySelector('.selected'));
 
-            this.className += ' selected';
+            addClass('selected', this);
 
             dropdown.querySelector('.name').innerHTML = this.querySelector('.name').innerHTML;
         });
     });
+
+function toggleClass(_class, element) {
+    if (hasClass(_class, element)) {
+        removeClass(_class, element);
+    } else {
+        addClass(_class, element);
+    }
+}
+
+function hasClass(_class, element) {
+    return element.className.includes(_class);
+}
+
+function removeClass(_class, element) {
+    if (hasClass(_class, element)) {
+        element.className = element.className.replace(_class, '');
+    }
+}
+
+function addClass(_class, element) {
+    element.className = element.className + ' ' + _class;
+}
 
 function isInputValid(input) {
     if (!input.value) {
