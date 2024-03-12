@@ -3,6 +3,10 @@ html {
     background-color: $color--white-1;
 }
 
+::placeholder {
+    color: $color--gray-2;
+}
+
 .heading-1 {
     font-size: 56px;
     line-height: 64px;
@@ -96,7 +100,7 @@ html {
             .description {
                 font-size: 12px;
                 font-weight: 700;
-                color: $color--gray;
+                color: $color--gray-1;
             }
         }
     }
