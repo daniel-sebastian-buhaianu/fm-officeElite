@@ -1,46 +1,80 @@
 @import 'global';
 
+body {
+    position: relative;
+}
+
+@media (min-width: 1440px) {
+    body {
+        min-height: 100vh;
+    }
+}
+
 header {
-    height: 355px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    height: 288px;
     background-image: url(../assets/home/bg-pattern-header.svg);
     background-repeat: no-repeat;
     background-size: 458px;
-    background-position: center -165px;
-    img {
-        max-width: 100%;
-    }
-    #logo {
+    background-position: center -170px;
+    text-align: center;
+    .logo {
+        display: inline-block;
         margin-top: 46px;
     }
 }
 
+@media (min-width: 768px) {
+    header {
+        height: auto;
+        background-image: none;
+        margin-bottom: 104px;
+        text-align: start;
+        .logo {
+            margin-top: 72px;
+            margin-left: 39px;
+            text-align: start;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    header {
+        margin-bottom: 154px;
+        .logo {
+            margin-top: 81px;
+            margin-left: 165px;
+        }
+    }
+}
+
 main {
-    text-align: center;
-    margin-top: -200px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -132px;
     padding: 0 24px;
-    .headline {
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 48px;
-        color: $color--black-1;
-        margin-bottom: 23px;
-    }
-    .summary {
-        color: $color--gray-1;
-        padding: 5px;
+    .info {
+        text-align: center;
         margin-bottom: 64px;
-    }
-    .countdown {
-        color: $color--black-2;
-        margin-bottom: 64px;
-        .timer .item {
-            background-color: $color--blue-4;
-            .number {
-                color: $color--blue-1;
+        .headline {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            color: $color--black-2;
+            margin-bottom: 16px;
+        }
+        .summary {
+            color: $color--gray-1;
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 64px;
+        }
+        .countdown {
+            color: $color--black-2;
+            .timer .item {
+                background-color: $color--blue-4;
+                .number {
+                    color: $color--blue-1;
+                }
             }
         }
     }
@@ -125,10 +159,86 @@ main {
     }
 }
 
+@media (min-width: 768px) {
+    main {
+        margin-top: 0;
+        .info {
+            margin-bottom: 104px;
+            .headline {
+                margin-bottom: 24px;
+            }
+            .summary {
+                width: 571px;
+                margin: 0 auto 40px auto;
+            }
+        }
+        .form {
+            width: 445px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 165px;
+        .info {
+            text-align: start;
+            width: 540px;
+            margin-bottom: 0;
+            .headline {
+                font-size: 56px;
+                line-height: 64px;
+            }
+            .summary {
+                font-size: 18px;
+                line-height: 28px;
+                max-width: 100%;
+            }
+            .countdown {
+                margin: 0;
+                .title {
+                    text-align: start;
+                }
+            }
+        }
+        .form {
+            margin: 0;
+        }
+    }
+}
+
 footer {
     height: 320px;
-    margin-top: -233px;
+    margin-top: -212.5px;
     background-color: #25293A;
     background-image: url(../assets/sign-up/bg-pattern-side.svg);
-    background-position: center;
+    background-size: 1202px;
+    background-position: -413px -408px;
+}
+
+@media (min-width: 768px) {
+    footer {
+        height: 380px;
+        margin-top: -228.5px;
+        background-size: 1454px;
+        background-position: center;
+    }
+}
+
+@media (min-width: 1440px) {
+    footer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 420px;
+        height: 100%;
+        margin: 0;
+        z-index: -1;
+        background-size: 2036px;
+        background-position: -763px -781px;
+    }
 }

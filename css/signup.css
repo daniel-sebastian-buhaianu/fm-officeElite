@@ -98,10 +98,12 @@ html {
 }
 
 .btn {
-  padding: 16px 32px;
+  padding: 14px 41px;
   border-radius: 28px;
   font-size: 16px;
   font-weight: 700;
+  line-height: 28px;
+  text-decoration: none;
 }
 .btn:hover {
   cursor: pointer;
@@ -147,12 +149,19 @@ html {
 }
 .countdown .timer {
   display: flex;
-  justify-content: space-between;
 }
 .countdown .timer .item {
+  width: 72px;
+  height: 92px;
+  margin-right: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #333950;
-  padding: 16px;
   border-radius: 5px;
+}
+.countdown .timer .item:last-child {
+  margin-right: 0;
 }
 .countdown .timer .item .number {
   font-size: 32px;
@@ -165,49 +174,101 @@ html {
   color: #747B95;
 }
 
+@media (min-width: 768px) {
+  .countdown {
+    width: 448px;
+  }
+  .countdown .title {
+    margin-bottom: 8px;
+  }
+  .countdown .timer .item {
+    width: 100px;
+    height: 128px;
+  }
+  .countdown .timer .item .number {
+    font-size: 56px;
+    line-height: 48px;
+    margin-bottom: 5px;
+  }
+  .countdown .timer .item .description {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+body {
+  position: relative;
+}
+
+@media (min-width: 1440px) {
+  body {
+    min-height: 100vh;
+  }
+}
 header {
-  height: 355px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  height: 288px;
   background-image: url(../assets/home/bg-pattern-header.svg);
   background-repeat: no-repeat;
   background-size: 458px;
-  background-position: center -165px;
+  background-position: center -170px;
+  text-align: center;
 }
-header img {
-  max-width: 100%;
-}
-header #logo {
+header .logo {
+  display: inline-block;
   margin-top: 46px;
 }
 
+@media (min-width: 768px) {
+  header {
+    height: auto;
+    background-image: none;
+    margin-bottom: 104px;
+    text-align: start;
+  }
+  header .logo {
+    margin-top: 72px;
+    margin-left: 39px;
+    text-align: start;
+  }
+}
+@media (min-width: 1440px) {
+  header {
+    margin-bottom: 154px;
+  }
+  header .logo {
+    margin-top: 81px;
+    margin-left: 165px;
+  }
+}
 main {
-  text-align: center;
-  margin-top: -200px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -132px;
   padding: 0 24px;
 }
-main .headline {
+main .info {
+  text-align: center;
+  margin-bottom: 64px;
+}
+main .info .headline {
   font-size: 40px;
   font-weight: 700;
   line-height: 48px;
-  color: #25293A;
-  margin-bottom: 23px;
-}
-main .summary {
-  color: #747B95;
-  padding: 5px;
-  margin-bottom: 64px;
-}
-main .countdown {
   color: #333950;
+  margin-bottom: 16px;
+}
+main .info .summary {
+  color: #747B95;
+  font-size: 16px;
+  line-height: 26px;
   margin-bottom: 64px;
 }
-main .countdown .timer .item {
+main .info .countdown {
+  color: #333950;
+}
+main .info .countdown .timer .item {
   background-color: #E4EAFF;
 }
-main .countdown .timer .item .number {
+main .info .countdown .timer .item .number {
   color: #5175FF;
 }
 main .form {
@@ -290,12 +351,85 @@ main .form .item:last-of-type {
   margin-bottom: 40px;
 }
 
+@media (min-width: 768px) {
+  main {
+    margin-top: 0;
+  }
+  main .info {
+    margin-bottom: 104px;
+  }
+  main .info .headline {
+    margin-bottom: 24px;
+  }
+  main .info .summary {
+    width: 571px;
+    margin: 0 auto 40px auto;
+  }
+  main .form {
+    width: 445px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  main {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 165px;
+  }
+  main .info {
+    text-align: start;
+    width: 540px;
+    margin-bottom: 0;
+  }
+  main .info .headline {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  main .info .summary {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 100%;
+  }
+  main .info .countdown {
+    margin: 0;
+  }
+  main .info .countdown .title {
+    text-align: start;
+  }
+  main .form {
+    margin: 0;
+  }
+}
 footer {
   height: 320px;
-  margin-top: -233px;
+  margin-top: -212.5px;
   background-color: #25293A;
   background-image: url(../assets/sign-up/bg-pattern-side.svg);
-  background-position: center;
+  background-size: 1202px;
+  background-position: -413px -408px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    height: 380px;
+    margin-top: -228.5px;
+    background-size: 1454px;
+    background-position: center;
+  }
+}
+@media (min-width: 1440px) {
+  footer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 420px;
+    height: 100%;
+    margin: 0;
+    z-index: -1;
+    background-size: 2036px;
+    background-position: -763px -781px;
+  }
 }
 
 /*# sourceMappingURL=signup.css.map */
