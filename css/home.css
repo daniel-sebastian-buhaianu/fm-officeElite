@@ -98,10 +98,12 @@ html {
 }
 
 .btn {
-  padding: 16px 32px;
+  padding: 14px 41px;
   border-radius: 28px;
   font-size: 16px;
   font-weight: 700;
+  line-height: 28px;
+  text-decoration: none;
 }
 .btn:hover {
   cursor: pointer;
@@ -147,12 +149,19 @@ html {
 }
 .countdown .timer {
   display: flex;
-  justify-content: space-between;
 }
 .countdown .timer .item {
+  width: 72px;
+  height: 92px;
+  margin-right: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #333950;
-  padding: 16px;
   border-radius: 5px;
+}
+.countdown .timer .item:last-child {
+  margin-right: 0;
 }
 .countdown .timer .item .number {
   font-size: 32px;
@@ -165,6 +174,27 @@ html {
   color: #747B95;
 }
 
+@media (min-width: 768px) {
+  .countdown {
+    width: 448px;
+  }
+  .countdown .title {
+    margin-bottom: 8px;
+  }
+  .countdown .timer .item {
+    width: 100px;
+    height: 128px;
+  }
+  .countdown .timer .item .number {
+    font-size: 56px;
+    line-height: 48px;
+    margin-bottom: 5px;
+  }
+  .countdown .timer .item .description {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
 header {
   padding: 46px 23px 0 23px;
   margin-bottom: 100px;
@@ -207,14 +237,14 @@ header .container .announcement .summary {
   color: #747B95;
 }
 header .container .announcement .call-to-action {
-  line-height: 28px;
-  padding: 14px 40px;
+  display: inline-block;
   box-shadow: 0 25px 25px -10px rgba(81, 117, 255, 0.25);
 }
 
 @media (min-width: 768px) {
   header {
     padding: 72px 39px 0 39px;
+    margin-bottom: 140px;
     background-size: 666px;
     background-position: 395px -164px;
   }
@@ -247,63 +277,109 @@ header .container .announcement .call-to-action {
   }
 }
 main {
-  padding: 23px;
+  padding: 0 23px;
 }
-
-#plans .plan {
+main .card {
   margin-bottom: 32px;
   position: relative;
 }
-#plans .plan:last-child {
+main .card:last-child {
   margin-bottom: 0;
 }
-#plans .plan:nth-child(2) {
+main .card:nth-child(2) {
   background-color: #5175FF;
   background-image: url(../assets/home/bg-pattern-pricing.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 102%;
+  background-position: center bottom;
   color: #FFFFFF;
 }
-#plans .plan:nth-child(2) .features {
+main .card:nth-child(2) .container .features {
   color: #FFFFFF;
 }
-#plans .plan .title {
+main .card:nth-child(2) .call-to-action {
+  background-color: #FFFFFF;
+}
+main .card .title {
   margin-bottom: 40px;
 }
-#plans .plan .price {
+main .card .container {
+  margin-bottom: 32px;
+}
+main .card .container .price {
   margin-bottom: 56px;
 }
-#plans .plan .price .title {
+main .card .container .price .title {
   margin-bottom: 8px;
 }
-#plans .plan .features {
-  margin-bottom: 32px;
+main .card .container .features {
   color: #747B95;
 }
-#plans .plan .features .feature {
+main .card .container .features .feature {
   margin-bottom: 24px;
 }
-#plans .plan .features .feature:last-child {
+main .card .container .features .feature:last-child {
   margin-bottom: 0;
 }
-#plans .plan .call-to-action {
-  width: 171px;
+main .card .call-to-action {
   margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  main {
+    padding: 0 39px;
+  }
+  main .card {
+    padding: 48px;
+    text-align: start;
+  }
+  main .card:nth-child(2) {
+    background-repeat: no-repeat;
+    background-position: -319px -282px;
+  }
+  main .card .title {
+    margin-bottom: 16px;
+  }
+  main .card .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    margin-bottom: 24px;
+  }
+  main .card .container .price {
+    margin-bottom: 0;
+  }
+  main .card .call-to-action {
+    margin: 0 auto 0 0;
+  }
+}
 footer {
   height: 1248px;
-  margin-top: -775px;
+  margin-top: -764px;
   background-color: #25293A;
   background-image: url(../assets/home/bg-pattern-footer.svg);
   background-repeat: no-repeat;
-  background-size: 1202px 1202px;
-  background-position: 50% 140px;
+  background-size: 1202px;
+  background-position: 50% 156px;
   text-align: center;
 }
 footer .countdown {
   padding-top: 894px;
   margin-bottom: 40px;
+}
+footer .call-to-action {
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  footer {
+    height: 986px;
+    margin-top: -498px;
+    background-size: 1454px;
+    background-position: 50% 15px;
+  }
+  footer .countdown {
+    padding-top: 598px;
+    margin-bottom: 48px;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */

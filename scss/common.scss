@@ -39,10 +39,12 @@ html {
 }
 
 .btn {
-    padding: 16px 32px;
+    padding: 14px 41px;
     border-radius: 28px;
     font-size: 16px;
     font-weight: 700;
+    line-height: 28px;
+    text-decoration: none;
     &:hover {
         cursor: pointer;
     }
@@ -87,11 +89,18 @@ html {
     }
     .timer {
         display: flex;
-        justify-content: space-between;
         .item {
+            width: 72px;
+            height: 92px;
+            margin-right: 13px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             background-color: $color--black-2;
-            padding: 16px;
             border-radius: 5px;
+            &:last-child {
+                margin-right: 0;
+            }
             .number {
                 font-size: 32px;
                 font-weight: 700;
@@ -101,6 +110,30 @@ html {
                 font-size: 12px;
                 font-weight: 700;
                 color: $color--gray-1;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .countdown {
+        width: 448px;
+        .title {
+            margin-bottom: 8px;
+        }
+        .timer {
+            .item {
+                width: 100px;
+                height: 128px;
+                .number {
+                    font-size: 56px;
+                    line-height: 48px;
+                    margin-bottom: 5px;
+                }
+                .description {
+                    font-size: 16px;
+                    line-height: 28px;
+                }
             }
         }
     }
