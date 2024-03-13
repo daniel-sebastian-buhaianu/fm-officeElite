@@ -195,6 +195,15 @@ html {
     line-height: 28px;
   }
 }
+body {
+  position: relative;
+}
+
+@media (min-width: 1440px) {
+  body {
+    min-height: 100vh;
+  }
+}
 header {
   height: 288px;
   background-image: url(../assets/home/bg-pattern-header.svg);
@@ -394,10 +403,33 @@ main .form .item:last-of-type {
 }
 footer {
   height: 320px;
-  margin-top: -233px;
+  margin-top: -212.5px;
   background-color: #25293A;
   background-image: url(../assets/sign-up/bg-pattern-side.svg);
-  background-position: center;
+  background-size: 1202px;
+  background-position: -413px -408px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    height: 380px;
+    margin-top: -228.5px;
+    background-size: 1454px;
+    background-position: center;
+  }
+}
+@media (min-width: 1440px) {
+  footer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 420px;
+    height: 100%;
+    margin: 0;
+    z-index: -1;
+    background-size: 2036px;
+    background-position: -763px -781px;
+  }
 }
 
 /*# sourceMappingURL=signup.css.map */
