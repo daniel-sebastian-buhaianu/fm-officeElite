@@ -1,53 +1,90 @@
 @import 'global';
 
 header {
-    height: 355px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    padding: 46px 23px 0 23px;
+    margin-bottom: 100px;
     background-image: url(../assets/home/bg-pattern-header.svg);
-    background-repeat: no-repeat;
     background-size: 458px;
-    background-position: center -165px;
-    img {
-        max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center -170px;
+    .logo {
+        text-align: center;
+        margin-bottom: 80px;
     }
-    #logo {
-        margin-top: 46px;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .illustration {
+            width: 171px;
+            margin-bottom: 63px;
+            img {
+                max-width: 100%;
+            }
+        }
+        .announcement {
+            text-align: center;
+            .headline {
+                font-size: 40px;
+                font-weight: bold;
+                line-height: 48px;
+                margin-bottom: 23px;
+                color: $color--black-2;
+            }
+            .summary {
+                font-size: 16px;
+                line-height: 26px;
+                padding: 5px;
+                margin-bottom: 23px;
+                color: $color--gray-1;
+            }
+            .call-to-action {
+                display: inline-block;
+                box-shadow: 0 25px 25px -10px rgba(81, 117, 255, 0.25);
+            }
+        }
     }
-    #illustration-charts {
-        width: 171px;
-        height: 192px;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 72px 39px 0 39px;
+        margin-bottom: 140px;
+        background-size: 666px;
+        background-position: 395px -164px;
+        .logo {
+            margin-bottom: 104px;
+            text-align: start;
+        }
+        .container {
+            flex-direction: row-reverse;
+            .announcement {
+                flex-basis: 345px;
+                flex-grow: 1;
+                flex-shrink: 0;
+                margin-right: 63px;
+                text-align: start;
+                .headline {
+                    margin-bottom: 24px;
+                }
+                .summary {
+                    padding: 0 0 0 5px;
+                    margin-bottom: 24px;
+                }
+            }
+            .illustration {
+                flex-basis: 281px;
+                flex-grow: 1;
+                flex-shrink: 0;
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
 main {
-    padding: 23px;
-}
-
-#intro {
-    text-align: center;
-    margin-bottom: 100px;
-    .headline {
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 48px;
-        color: $color--black-1;
-        margin-bottom: 23px;
-    }
-    .summary {
-        color: $color--gray;
-        padding: 5px;
-        margin-bottom: 23px;
-    }
-    .call-to-action {
-        box-shadow: 0 25px 25px -10px rgba(81, 117, 255, 0.25);
-    }
-}
-
-#plans {
-    .plan {
+    padding: 0 23px;
+    .card {
         margin-bottom: 32px;
         position: relative;
         &:last-child {
@@ -56,50 +93,98 @@ main {
         &:nth-child(2) {
             background-color: $color--blue-1;
             background-image: url(../assets/home/bg-pattern-pricing.svg);
-            background-repeat: no-repeat;
-            background-position: 50% 102%;
+            background-position: center bottom;
             color: $color--white-2;
-            .features {
+            .container .features {
                 color: $color--white-2;
+            }
+            .call-to-action {
+                background-color: $color--white-2;
             }
         }
         .title {
             margin-bottom: 40px;
         }
-        .price {
-            margin-bottom: 56px;
-            .title {
-                margin-bottom: 8px;
-            }
-        }
-        .features {
+        .container {
             margin-bottom: 32px;
-            color: $color--gray;
-            .feature {
-                margin-bottom: 24px;
-                &:last-child {
-                    margin-bottom: 0;
+            .price {
+                margin-bottom: 56px;
+                .title {
+                    margin-bottom: 8px;
+                }
+            }
+            .features {
+                color: $color--gray-1;
+                .feature {
+                    margin-bottom: 24px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
                 }
             }
         }
         .call-to-action {
-            width: 171px;
             margin: 0 auto;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 0 39px;
+        .card {
+            padding: 48px;
+            text-align: start;
+            &:nth-child(2) {
+                background-repeat: no-repeat;
+                background-position: -319px -282px;
+            }
+            .title {
+                margin-bottom: 16px;
+            }
+            .container {
+                display: flex;
+                justify-content: space-between;
+                text-align: start;
+                margin-bottom: 24px;
+                .price {
+                    margin-bottom: 0;
+                }
+            }
+            .call-to-action {
+                margin: 0 auto 0 0;
+            }
         }
     }
 }
 
 footer {
     height: 1248px;
-    margin-top: -775px;
+    margin-top: -764px;
     background-color: #25293A;
     background-image: url(../assets/home/bg-pattern-footer.svg);
     background-repeat: no-repeat;
-    background-size: 1202px 1202px;
-    background-position: 50% 140px;
+    background-size: 1202px;
+    background-position: 50% 156px;
     text-align: center;
     .countdown {
         padding-top: 894px;
         margin-bottom: 40px;
+    }
+    .call-to-action {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 768px) {
+    footer {
+        height: 986px;
+        margin-top: -498px;
+        background-size: 1454px;
+        background-position: 50% 15px;
+        .countdown {
+            padding-top: 598px;
+            margin-bottom: 48px;
+        }
     }
 }

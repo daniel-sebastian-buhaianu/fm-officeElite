@@ -9,28 +9,28 @@
 
   <body>
     <header>
-      <div id="logo">
+      <div class="logo">
         <img src="assets/shared/logo.svg" alt="officelite logo">
       </div>
 
-      <div id="illustration-charts">
-        <img src="assets/home/illustration-charts.svg" alt="illustration charts">
-      </div>
+      <section class="container">
+        <div class="illustration">
+          <img src="assets/home/illustration-charts.svg" alt="illustration charts">
+        </div>
+
+        <article class="announcement">
+          <h1 class="headline">A simple solution to complex tasks is coming soon</h1>
+          <p class="summary">Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration platform built with an intuitive interface to improve productivity.</p>
+          <a class="call-to-action btn btn--primary" href="signup.html">Get Started</a>
+        </article>
+      </section>
     </header>
 
     <main>
-      <section id="intro">
-        <h1 class="headline">A simple solution to complex tasks is coming soon</h1>
-        <p class="summary body-2">Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new collaboration platform built with an intuitive interface to improve productivity.</p>
-        <a href="signup.html">
-          <button class="call-to-action btn btn--primary">Get Started</button>
-        </a>
-      </section>
+      <article class="card">
+        <h1 class="title heading-2">Basic</h1>
 
-      <section id="plans">
-        <article class="plan card">
-          <h1 class="title heading-2">Basic</h1>
-
+        <div class="container">
           <div class="price">
             <h2 class="title heading-1">Free</h2>
             <p class="description body-2">Up to 5 users for free</p>
@@ -41,15 +41,15 @@
             <li class="feature">2 GB storage</li>
             <li class="feature">Great security and support</li>
           </ul>
+        </div>
 
-          <a href="signup.html">
-            <button class="call-to-action btn btn--secondary">Try for Free</button>
-          </a>
-        </article>
+        <a class="call-to-action btn btn--secondary" href="signup.html">Try for Free</a>
+      </article>
 
-        <article class="plan card">
-          <h1 class="title heading-2">Pro</h1>
+      <article class="card">
+        <h1 class="title heading-2">Pro</h1>
 
+        <div class="container">
           <div class="price">
             <h2 class="title heading-1">$9.99</h2>
             <p class="description body-2">Per user, billed monthly</p>
@@ -60,14 +60,15 @@
             <li class="feature">50 GB storage</li>
             <li class="feature">More control and insights</li>
           </ul>
-          <a href="signup.html">
-            <button class="call-to-action btn btn--secondary">Try for Free</button>
-          </a>
-        </article>
+        </div>
 
-        <article class="plan card">
-          <h1 class="title heading-2">Ultimate</h1>
+        <a class="call-to-action btn btn--secondary" href="signup.html">Try for Free</a>
+      </article>
 
+      <article class="card">
+        <h1 class="title heading-2">Ultimate</h1>
+
+        <div class="container">
           <div class="price">
             <h2 class="title heading-1">$19.99</h2>
             <p class="description body-2">Per user, billed monthly</p>
@@ -78,12 +79,10 @@
             <li class="feature">100 GB storage</li>
             <li class="feature">VIP support</li>
           </ul>
+        </div>
 
-          <a href="signup.html">
-            <button class="call-to-action btn btn--secondary">Try for Free</button>
-          </a>
-        </article>
-      </section>
+        <a class="call-to-action btn btn--secondary" href="signup.html">Try for Free</a>
+      </article>
     </main>
 
     <footer>
@@ -109,9 +108,7 @@
         </div>
       </div>
 
-      <a href="signup.html">
-        <button class="call-to-action btn btn--primary">Get Started</button>
-      </a>
+      <a class="call-to-action btn btn--primary" href="signup.html">Get Started</a>
     </footer>
 
     <script src="js/countdown.js"></script>
