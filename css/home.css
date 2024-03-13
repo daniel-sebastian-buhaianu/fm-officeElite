@@ -276,6 +276,29 @@ header .container .announcement .call-to-action {
     margin-bottom: 0;
   }
 }
+@media (min-width: 1440px) {
+  header {
+    padding: 81px 165px 0 165px;
+    background-size: 1134px;
+    background-position: 656px -419px;
+    margin-bottom: 164px;
+  }
+  header .logo {
+    margin-bottom: 102px;
+  }
+  header .container .announcement {
+    margin-right: 95px;
+  }
+  header .container .announcement .headline {
+    font-size: 56px;
+    line-height: 64px;
+  }
+  header .container .announcement .summary {
+    padding: 0 5px 0 0;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
 main {
   padding: 0 23px;
 }
@@ -297,6 +320,9 @@ main .card:nth-child(2) .container .features {
 }
 main .card:nth-child(2) .call-to-action {
   background-color: #FFFFFF;
+}
+main .card:nth-child(2) .call-to-action:hover {
+  color: #829CFF;
 }
 main .card .title {
   margin-bottom: 40px;
@@ -351,6 +377,32 @@ main .card .call-to-action {
     margin: 0 auto 0 0;
   }
 }
+@media (min-width: 1440px) {
+  main {
+    display: flex;
+    padding: 0 165px;
+    justify-content: space-between;
+  }
+  main .card {
+    padding: 40px;
+    margin-bottom: 0;
+    width: 350px;
+  }
+  main .card .title {
+    text-align: center;
+  }
+  main .card .container {
+    display: block;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  main .card .container .price {
+    margin-bottom: 56px;
+  }
+  main .card .call-to-action {
+    margin: 0 auto;
+  }
+}
 footer {
   height: 1248px;
   margin-top: -764px;
@@ -361,11 +413,13 @@ footer {
   background-position: 50% 156px;
   text-align: center;
 }
-footer .countdown {
+footer .container {
   padding-top: 894px;
+}
+footer .container .countdown {
   margin-bottom: 40px;
 }
-footer .call-to-action {
+footer .container .call-to-action {
   display: inline-block;
 }
 
@@ -376,9 +430,32 @@ footer .call-to-action {
     background-size: 1454px;
     background-position: 50% 15px;
   }
-  footer .countdown {
+  footer .container {
     padding-top: 598px;
+  }
+  footer .container .countdown {
     margin-bottom: 48px;
+  }
+}
+@media (min-width: 1440px) {
+  footer {
+    height: 603px;
+    margin-top: -232px;
+    background-size: 2036px;
+    background-position: -702px -592px;
+    padding: 0 165px;
+  }
+  footer .container {
+    padding-top: 315px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .container .countdown {
+    margin: 0;
+  }
+  footer .container .call-to-action {
+    max-height: 56px;
   }
 }
 
