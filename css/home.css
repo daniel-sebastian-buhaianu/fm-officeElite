@@ -62,6 +62,10 @@ html {
   background-color: #FAFAFA;
 }
 
+::placeholder {
+  color: #BABDCA;
+}
+
 .heading-1 {
   font-size: 56px;
   line-height: 64px;
@@ -162,49 +166,88 @@ html {
 }
 
 header {
-  height: 355px;
+  padding: 46px 23px 0 23px;
+  margin-bottom: 100px;
+  background-image: url(../assets/home/bg-pattern-header.svg);
+  background-size: 458px;
+  background-repeat: no-repeat;
+  background-position: center -170px;
+}
+header .logo {
+  text-align: center;
+  margin-bottom: 80px;
+}
+header .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  background-image: url(../assets/home/bg-pattern-header.svg);
-  background-repeat: no-repeat;
-  background-size: 458px;
-  background-position: center -165px;
 }
-header img {
+header .container .illustration {
+  width: 171px;
+  margin-bottom: 63px;
+}
+header .container .illustration img {
   max-width: 100%;
 }
-header #logo {
-  margin-top: 46px;
-}
-header #illustration-charts {
-  width: 171px;
-  height: 192px;
-}
-
-main {
-  padding: 23px;
-}
-
-#intro {
+header .container .announcement {
   text-align: center;
-  margin-bottom: 100px;
 }
-#intro .headline {
+header .container .announcement .headline {
   font-size: 40px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 48px;
-  color: #25293A;
   margin-bottom: 23px;
+  color: #333950;
 }
-#intro .summary {
-  color: #747B95;
+header .container .announcement .summary {
+  font-size: 16px;
+  line-height: 26px;
   padding: 5px;
   margin-bottom: 23px;
+  color: #747B95;
 }
-#intro .call-to-action {
+header .container .announcement .call-to-action {
+  line-height: 28px;
+  padding: 14px 40px;
   box-shadow: 0 25px 25px -10px rgba(81, 117, 255, 0.25);
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 72px 39px 0 39px;
+    background-size: 666px;
+    background-position: 395px -164px;
+  }
+  header .logo {
+    margin-bottom: 104px;
+    text-align: start;
+  }
+  header .container {
+    flex-direction: row-reverse;
+  }
+  header .container .announcement {
+    flex-basis: 345px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-right: 63px;
+    text-align: start;
+  }
+  header .container .announcement .headline {
+    margin-bottom: 24px;
+  }
+  header .container .announcement .summary {
+    padding: 0 0 0 5px;
+    margin-bottom: 24px;
+  }
+  header .container .illustration {
+    flex-basis: 281px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+}
+main {
+  padding: 23px;
 }
 
 #plans .plan {

@@ -1,49 +1,89 @@
 @import 'global';
 
 header {
-    height: 355px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    padding: 46px 23px 0 23px;
+    margin-bottom: 100px;
     background-image: url(../assets/home/bg-pattern-header.svg);
-    background-repeat: no-repeat;
     background-size: 458px;
-    background-position: center -165px;
-    img {
-        max-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center -170px;
+    .logo {
+        text-align: center;
+        margin-bottom: 80px;
     }
-    #logo {
-        margin-top: 46px;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .illustration {
+            width: 171px;
+            margin-bottom: 63px;
+            img {
+                max-width: 100%;
+            }
+        }
+        .announcement {
+            text-align: center;
+            .headline {
+                font-size: 40px;
+                font-weight: bold;
+                line-height: 48px;
+                margin-bottom: 23px;
+                color: $color--black-2;
+            }
+            .summary {
+                font-size: 16px;
+                line-height: 26px;
+                padding: 5px;
+                margin-bottom: 23px;
+                color: $color--gray-1;
+            }
+            .call-to-action {
+                line-height: 28px;
+                padding: 14px 40px;
+                box-shadow: 0 25px 25px -10px rgba(81, 117, 255, 0.25);
+            }
+        }
     }
-    #illustration-charts {
-        width: 171px;
-        height: 192px;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 72px 39px 0 39px;
+        background-size: 666px;
+        background-position: 395px -164px;
+        .logo {
+            margin-bottom: 104px;
+            text-align: start;
+        }
+        .container {
+            flex-direction: row-reverse;
+            .announcement {
+                flex-basis: 345px;
+                flex-grow: 1;
+                flex-shrink: 0;
+                margin-right: 63px;
+                text-align: start;
+                .headline {
+                    margin-bottom: 24px;
+                }
+                .summary {
+                    padding: 0 0 0 5px;
+                    margin-bottom: 24px;
+                }
+            }
+            .illustration {
+                flex-basis: 281px;
+                flex-grow: 1;
+                flex-shrink: 0;
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
 main {
     padding: 23px;
-}
-
-#intro {
-    text-align: center;
-    margin-bottom: 100px;
-    .headline {
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 48px;
-        color: $color--black-1;
-        margin-bottom: 23px;
-    }
-    .summary {
-        color: $color--gray;
-        padding: 5px;
-        margin-bottom: 23px;
-    }
-    .call-to-action {
-        box-shadow: 0 25px 25px -10px rgba(81, 117, 255, 0.25);
-    }
 }
 
 #plans {
@@ -74,7 +114,7 @@ main {
         }
         .features {
             margin-bottom: 32px;
-            color: $color--gray;
+            color: $color--gray-1;
             .feature {
                 margin-bottom: 24px;
                 &:last-child {
