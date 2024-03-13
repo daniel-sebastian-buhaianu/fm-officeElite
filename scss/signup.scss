@@ -1,20 +1,38 @@
 @import 'global';
 
 header {
-    height: 355px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    height: 288px;
     background-image: url(../assets/home/bg-pattern-header.svg);
     background-repeat: no-repeat;
     background-size: 458px;
-    background-position: center -165px;
-    img {
-        max-width: 100%;
+    background-position: center -170px;
+    .logo {
+        display: block;
+        text-align: center;
+        padding-top: 46px;
     }
-    #logo {
-        margin-top: 46px;
+}
+
+@media (min-width: 768px) {
+    header {
+        height: auto;
+        background-image: none;
+        margin-bottom: 104px;
+        .logo {
+            padding-top: 72px;
+            padding-left: 39px;
+            text-align: start;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    header {
+        margin-bottom: 154px;
+        .logo {
+            padding-top: 81px;
+            padding-left: 165px;
+        }
     }
 }
 

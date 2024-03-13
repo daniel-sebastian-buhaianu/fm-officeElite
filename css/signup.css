@@ -98,10 +98,12 @@ html {
 }
 
 .btn {
-  padding: 16px 32px;
+  padding: 14px 41px;
   border-radius: 28px;
   font-size: 16px;
   font-weight: 700;
+  line-height: 28px;
+  text-decoration: none;
 }
 .btn:hover {
   cursor: pointer;
@@ -147,12 +149,19 @@ html {
 }
 .countdown .timer {
   display: flex;
-  justify-content: space-between;
 }
 .countdown .timer .item {
+  width: 72px;
+  height: 92px;
+  margin-right: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #333950;
-  padding: 16px;
   border-radius: 5px;
+}
+.countdown .timer .item:last-child {
+  margin-right: 0;
 }
 .countdown .timer .item .number {
   font-size: 32px;
@@ -165,24 +174,61 @@ html {
   color: #747B95;
 }
 
+@media (min-width: 768px) {
+  .countdown {
+    width: 448px;
+  }
+  .countdown .title {
+    margin-bottom: 8px;
+  }
+  .countdown .timer .item {
+    width: 100px;
+    height: 128px;
+  }
+  .countdown .timer .item .number {
+    font-size: 56px;
+    line-height: 48px;
+    margin-bottom: 5px;
+  }
+  .countdown .timer .item .description {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
 header {
-  height: 355px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  height: 288px;
   background-image: url(../assets/home/bg-pattern-header.svg);
   background-repeat: no-repeat;
   background-size: 458px;
-  background-position: center -165px;
+  background-position: center -170px;
 }
-header img {
-  max-width: 100%;
-}
-header #logo {
-  margin-top: 46px;
+header .logo {
+  display: block;
+  text-align: center;
+  padding-top: 46px;
 }
 
+@media (min-width: 768px) {
+  header {
+    height: auto;
+    background-image: none;
+    margin-bottom: 104px;
+  }
+  header .logo {
+    padding-top: 72px;
+    padding-left: 39px;
+    text-align: start;
+  }
+}
+@media (min-width: 1440px) {
+  header {
+    margin-bottom: 154px;
+  }
+  header .logo {
+    padding-top: 81px;
+    padding-left: 165px;
+  }
+}
 main {
   text-align: center;
   margin-top: -200px;
