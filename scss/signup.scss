@@ -6,10 +6,10 @@ header {
     background-repeat: no-repeat;
     background-size: 458px;
     background-position: center -170px;
+    text-align: center;
     .logo {
-        display: block;
-        text-align: center;
-        padding-top: 46px;
+        display: inline-block;
+        margin-top: 46px;
     }
 }
 
@@ -18,9 +18,10 @@ header {
         height: auto;
         background-image: none;
         margin-bottom: 104px;
+        text-align: start;
         .logo {
-            padding-top: 72px;
-            padding-left: 39px;
+            margin-top: 72px;
+            margin-left: 39px;
             text-align: start;
         }
     }
@@ -30,8 +31,8 @@ header {
     header {
         margin-bottom: 154px;
         .logo {
-            padding-top: 81px;
-            padding-left: 165px;
+            margin-top: 81px;
+            margin-left: 165px;
         }
     }
 }
