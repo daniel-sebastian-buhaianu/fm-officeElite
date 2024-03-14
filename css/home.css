@@ -458,6 +458,8 @@ footer .container .call-to-action {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1110px;
+    margin: 0 auto;
   }
   footer .container .countdown {
     margin: 0;
