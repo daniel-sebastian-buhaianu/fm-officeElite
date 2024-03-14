@@ -196,8 +196,9 @@ html {
   }
 }
 header {
+  max-width: 460px;
   padding: 46px 23px 0 23px;
-  margin-bottom: 100px;
+  margin: 0 auto 100px auto;
   background-image: url(../assets/home/bg-pattern-header.svg);
   background-size: 458px;
   background-repeat: no-repeat;
@@ -243,6 +244,7 @@ header .container .announcement .call-to-action {
 
 @media (min-width: 768px) {
   header {
+    max-width: 1068px;
     padding: 72px 39px 0 39px;
     margin-bottom: 140px;
     background-size: 666px;
@@ -278,6 +280,7 @@ header .container .announcement .call-to-action {
 }
 @media (min-width: 1440px) {
   header {
+    max-width: 1795px;
     padding: 81px 165px 0 165px;
     background-size: 1134px;
     background-position: 656px -419px;
@@ -303,7 +306,8 @@ main {
   padding: 0 23px;
 }
 main .card {
-  margin-bottom: 32px;
+  max-width: 329px;
+  margin: 0 auto 32px auto;
   position: relative;
 }
 main .card:last-child {
@@ -354,6 +358,7 @@ main .card .call-to-action {
     padding: 0 39px;
   }
   main .card {
+    max-width: 690px;
     padding: 48px;
     text-align: start;
   }
@@ -380,13 +385,16 @@ main .card .call-to-action {
 @media (min-width: 1440px) {
   main {
     display: flex;
-    padding: 0 165px;
+    width: 1110px;
+    margin: 0 auto;
+    padding: 0;
     justify-content: space-between;
   }
   main .card {
-    padding: 40px;
-    margin-bottom: 0;
     width: 350px;
+    max-width: none;
+    padding: 40px;
+    margin: 0;
   }
   main .card .title {
     text-align: center;
@@ -450,6 +458,8 @@ footer .container .call-to-action {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1110px;
+    margin: 0 auto;
   }
   footer .container .countdown {
     margin: 0;
