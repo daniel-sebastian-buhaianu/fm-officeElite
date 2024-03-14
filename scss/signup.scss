@@ -1,0 +1,248 @@
+@import 'global';
+
+body {
+    position: relative;
+}
+
+@media (min-width: 1440px) {
+    body {
+        min-height: 100vh;
+    }
+}
+
+header {
+    height: 288px;
+    background-image: url(../assets/home/bg-pattern-header.svg);
+    background-repeat: no-repeat;
+    background-size: 458px;
+    background-position: center -170px;
+    text-align: center;
+    .logo {
+        display: inline-block;
+        margin-top: 46px;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        height: auto;
+        background-image: none;
+        margin-bottom: 104px;
+        text-align: start;
+        .logo {
+            margin-top: 72px;
+            margin-left: 39px;
+            text-align: start;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    header {
+        margin-bottom: 154px;
+        .logo {
+            margin-top: 81px;
+            margin-left: 165px;
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+    max-width: 375px;
+    margin: -132px auto 0 auto;
+    .info {
+        text-align: center;
+        margin-bottom: 64px;
+        .headline {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            color: $color--black-2;
+            margin-bottom: 16px;
+        }
+        .summary {
+            color: $color--gray-1;
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 64px;
+        }
+        .countdown {
+            color: $color--black-2;
+            .timer .item {
+                background-color: $color--blue-4;
+                .number {
+                    color: $color--blue-1;
+                }
+            }
+        }
+    }
+    .form {
+        position: relative;
+        padding: 24px;
+        .item {
+            position: relative;
+            display: flex;
+            padding: 0 16px 16px 16px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid $color--gray-2;
+            .error {
+                display: none;
+            }
+            input {
+                width: 100%;
+                font-size: 16px;
+                color: $color--black-2;
+            }
+            &.with-error {
+                border-bottom-color: $color--red;
+                .error {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                }
+                input {
+                    padding-right: 16px;
+                    color: $color--red;
+                }
+            }
+            &.dropdown {
+                position: relative;
+                justify-content: space-between;
+                .name {
+                    color: $color--black-2;
+                    font-size: 16px;
+                    font-weight: 700;
+                    .price {
+                        color: $color--gray-2;
+                        margin-left: 8px;
+                    }
+                }
+                .options {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 40px;
+                    z-index: 1;
+                    width: 100%;
+                    padding: 16px;
+                    border: 1px solid $color--gray-2;
+                    &.active {
+                        display: block;
+                    }
+                    .item {
+                        justify-content: space-between;
+                        padding: 0 0 16px 0;
+                        margin: 0 0 16px 0;
+                        &:last-child {
+                            padding: 0;
+                            margin: 0;
+                            border: 0;
+                        }
+                        &.selected .icon {
+                            display: block;
+                        }
+                        .icon {
+                            display: none;
+                        }
+                    }
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            &:last-of-type {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        max-width: none;
+        margin-top: 0;
+        .info {
+            margin-bottom: 104px;
+            .headline {
+                margin-bottom: 24px;
+            }
+            .summary {
+                width: 571px;
+                margin: 0 auto 40px auto;
+            }
+        }
+        .form {
+            width: 445px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    main {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1110px;
+        margin-left: 165px;
+        padding: 0;
+        .info {
+            text-align: start;
+            width: 540px;
+            margin-bottom: 0;
+            .headline {
+                font-size: 56px;
+                line-height: 64px;
+            }
+            .summary {
+                font-size: 18px;
+                line-height: 28px;
+                max-width: 100%;
+            }
+            .countdown {
+                margin: 0;
+                .title {
+                    text-align: start;
+                }
+            }
+        }
+        .form {
+            margin: 0;
+        }
+    }
+}
+
+footer {
+    height: 320px;
+    margin-top: -212.5px;
+    background-color: #25293A;
+    background-image: url(../assets/sign-up/bg-pattern-side.svg);
+    background-size: 1202px;
+    background-position: -413px -408px;
+}
+
+@media (min-width: 768px) {
+    footer {
+        height: 380px;
+        margin-top: -228.5px;
+        background-size: 1454px;
+        background-position: center;
+    }
+}
+
+@media (min-width: 1440px) {
+    footer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(100vw - 1020px);
+        height: 100%;
+        margin: 0;
+        z-index: -1;
+        background-size: 2036px;
+        background-position: -763px -781px;
+    }
+}
