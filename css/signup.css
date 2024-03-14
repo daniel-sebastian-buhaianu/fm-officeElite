@@ -242,8 +242,9 @@ header .logo {
 main {
   display: flex;
   flex-direction: column;
-  margin-top: -132px;
   padding: 0 24px;
+  max-width: 375px;
+  margin: -132px auto 0 auto;
 }
 main .info {
   text-align: center;
@@ -353,6 +354,7 @@ main .form .item:last-of-type {
 
 @media (min-width: 768px) {
   main {
+    max-width: none;
     margin-top: 0;
   }
   main .info {
@@ -375,7 +377,9 @@ main .form .item:last-of-type {
   main {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 165px;
+    max-width: 1110px;
+    margin-left: 165px;
+    padding: 0;
   }
   main .info {
     text-align: start;
@@ -423,7 +427,7 @@ footer {
     position: absolute;
     top: 0;
     right: 0;
-    width: 420px;
+    width: calc(100vw - 1020px);
     height: 100%;
     margin: 0;
     z-index: -1;
