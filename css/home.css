@@ -306,7 +306,8 @@ main {
   padding: 0 23px;
 }
 main .card {
-  margin-bottom: 32px;
+  max-width: 329px;
+  margin: 0 auto 32px auto;
   position: relative;
 }
 main .card:last-child {
@@ -357,6 +358,7 @@ main .card .call-to-action {
     padding: 0 39px;
   }
   main .card {
+    max-width: 690px;
     padding: 48px;
     text-align: start;
   }
@@ -383,13 +385,16 @@ main .card .call-to-action {
 @media (min-width: 1440px) {
   main {
     display: flex;
-    padding: 0 165px;
+    width: 1110px;
+    margin: 0 auto;
+    padding: 0;
     justify-content: space-between;
   }
   main .card {
-    padding: 40px;
-    margin-bottom: 0;
     width: 350px;
+    max-width: none;
+    padding: 40px;
+    margin: 0;
   }
   main .card .title {
     text-align: center;

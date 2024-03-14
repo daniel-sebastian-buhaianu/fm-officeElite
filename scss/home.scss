@@ -114,7 +114,8 @@ header {
 main {
     padding: 0 23px;
     .card {
-        margin-bottom: 32px;
+        max-width: 329px;
+        margin: 0 auto 32px auto;
         position: relative;
         &:last-child {
             margin-bottom: 0;
@@ -165,6 +166,7 @@ main {
     main {
         padding: 0 39px;
         .card {
+            max-width: 690px;;
             padding: 48px;
             text-align: start;
             &:nth-child(2) {
@@ -193,12 +195,15 @@ main {
 @media (min-width: 1440px) {
     main {
         display: flex;
-        padding: 0 165px;
+        width: 1110px;
+        margin: 0 auto;
+        padding: 0;
         justify-content: space-between;
         .card {
-            padding: 40px;
-            margin-bottom: 0;
             width: 350px;
+            max-width: none;
+            padding: 40px;
+            margin: 0;
             .title {
                 text-align: center;
             }
