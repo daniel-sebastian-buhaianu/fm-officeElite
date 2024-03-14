@@ -1,8 +1,9 @@
 @import 'global';
 
 header {
+    max-width: 460px;
     padding: 46px 23px 0 23px;
-    margin-bottom: 100px;
+    margin: 0 auto 100px auto;
     background-image: url(../assets/home/bg-pattern-header.svg);
     background-size: 458px;
     background-repeat: no-repeat;
@@ -48,6 +49,7 @@ header {
 
 @media (min-width: 768px) {
     header {
+        max-width: 1068px;
         padding: 72px 39px 0 39px;
         margin-bottom: 140px;
         background-size: 666px;
@@ -84,6 +86,7 @@ header {
 
 @media (min-width: 1440px) {
     header {
+        max-width: 1795px;
         padding: 81px 165px 0 165px;
         background-size: 1134px;
         background-position: 656px -419px;
